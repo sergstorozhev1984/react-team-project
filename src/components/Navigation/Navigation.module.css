@@ -1,0 +1,11 @@
+.NavLink {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #9B9FAA;
+}
+
+.NavLinkActive {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #212121;
+}
