@@ -73,8 +73,9 @@ h3 {
 }
 
 .headerCalculate {
+  max-width: 608px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 34px;
   line-height: 140%;
   margin-bottom: 32px;
 }
