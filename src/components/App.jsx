@@ -1,4 +1,6 @@
+import CalculatorPage from 'pages/CalculatorPage/CalculatorPage';
 import LoginPage from 'pages/LoginPage/LoginPage';
+import MainPage from 'pages/MainPage/MainPage';
 import RegistrationPage from 'pages/RegistrationPage/RegistrationPage';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,11 +21,11 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<p>main</p>} />
+        <Route index element={<MainPage/>} />
         <Route path="/" element={<PrivateRoute />}>
-          <Route path="/calculator" element={<p>calculator</p>} />
+          <Route path="/calculator" element={<CalculatorPage/>} />
           <Route path="/diary" element={<p>diary</p>} />
-          <Route path="/main" element={<p>main</p>} />
+          <Route path="/main" element={<MainPage/>} />
         </Route>
         <Route path="/" element={<PublicRoute />}>
           <Route path="/register" element={<RegistrationPage />} />
