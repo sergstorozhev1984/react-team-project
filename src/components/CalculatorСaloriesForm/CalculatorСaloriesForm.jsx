@@ -1,5 +1,5 @@
 import React from 'react';
-import css from '../RightSideBar/RightSideBar.module.css';
+import css from './CalculatorСaloriesForm.module.css';
 
 function CalculatorСaloriesForm() {
   return (
@@ -25,10 +25,8 @@ function CalculatorСaloriesForm() {
           Desired weight *
           <input className={css.inputCalculate} type="text" name="name" />
         </label>
-      </form>
-      <form className={css.formRadioCalculate}>
-        Blood type *
         <div className={css.radioBtn}>
+        <p className={css.labelCalculate}>Blood type *</p>
           <label className={css.labelRadioCalculate}>
             <input
               className={css.inputRadioCalculate}
@@ -67,7 +65,7 @@ function CalculatorСaloriesForm() {
             4
           </label>
         </div>
-      </form>
+        </form>
       <button className={css.btnCalculate} type="submit">
         Start losing weight
       </button>
