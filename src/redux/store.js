@@ -16,6 +16,7 @@ import persistReducer from 'redux-persist/es/persistReducer';
 const persistConfig = {
   key: 'auth-user',
   storage,
+  whitelist: ['sid', 'refreshToken'],
 };
 export const persistedAuthUserReducer = persistReducer(
   persistConfig,

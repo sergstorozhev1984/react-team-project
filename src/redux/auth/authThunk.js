@@ -1,53 +1,91 @@
-// import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { token } from 'htpp/htpp';
+import {
+  login,
+  logOut,
+  registration,
+  userGetInfo,
+  userRefresh,
+} from 'services/authUserApi';
 
-// export const registerThunk = createAsyncThunk(
-//   'user/register',
-//   async (formData, thunkAPI) => {
-//     try {
-//       const response = await UserAPI.register(formData);
-//       localStorage.setItem('token', response.token);
+export const registerThunk = createAsyncThunk(
+  'user/register',
+  async (formData, thunkAPI) => {
+    const { email, password } = formData;
+    try {
+      await registration(formData);
+      const data = await login({ email, password });
+      token.set(data.accessToken);
 
-//       return response;
-//     } catch (e) {
-//       return thunkAPI.rejectWithValue(e.message);
-//     }
-//   }
-// );
+      return data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
 
-// export const loginThunk = createAsyncThunk(
-//   'user/login',
-//   async (formData, thunkAPI) => {
-//     try {
-//       const response = await UserAPI.login(formData);
-//       localStorage.setItem('token', response.token);
-//       return response;
-//     } catch (e) {
-//       return thunkAPI.rejectWithValue(e.message);
-//     }
-//   }
-// );
-// export const logOutThunk = createAsyncThunk(
-//   'user/logout',
-//   async (_, thunkAPI) => {
-//     try {
-//       const response = await UserAPI.userLogOutRequest();
-//       localStorage.setItem('token', response.token);
-//       return response;
-//     } catch (e) {
-//       return thunkAPI.rejectWithValue(e.message);
-//     }
-//   }
-// );
-// export const curentUserThunk = createAsyncThunk(
+export const loginThunk = createAsyncThunk(
+  'user/login',
+  async (formData, thunkAPI) => {
+    try {
+      const data = await login(formData);
+      token.set(data.accessToken);
+
+      return data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+export const logOutThunk = createAsyncThunk(
+  'user/logout',
+  async (_, thunkAPI) => {
+    try {
+      await logOut();
+
+      token.unset();
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+// export const userRefreshThunk = createAsyncThunk(
 //   'user/curentUserThunk',
 //   async (_, thunkAPI) => {
 //     try {
-//       const response = await UserAPI.getUserDetailsRequest();
-//       const token = localStorage.getItem('token', response.token);
+//       const response = await userRefresh();
 
-//       return { token, user: response };
+//       return response;
 //     } catch (e) {
 //       return thunkAPI.rejectWithValue(e.message);
 //     }
 //   }
 // );
+export const userRefreshThunk = createAsyncThunk(
+  'user/curentUserThunk',
+  async (oldSid, thunkAPI) => {
+    const state = thunkAPI.getState();
+
+    const refreshToken = state.auth.refreshToken;
+
+    token.set(refreshToken);
+
+    try {
+      const { newAccessToken, newRefreshToken, sid } = await userRefresh({
+        sid: oldSid,
+      });
+      token.set(newAccessToken);
+
+      const data = await userGetInfo();
+
+      return {
+        user: data,
+        sid,
+        refreshToken: newRefreshToken,
+        accessToken: newAccessToken,
+      };
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
