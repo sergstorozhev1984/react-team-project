@@ -12,6 +12,7 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import persistReducer from 'redux-persist/es/persistReducer';
+import { infoReducer } from './info/info-slice';
 
 const persistConfig = {
   key: 'auth-user',
@@ -26,6 +27,7 @@ export const persistedAuthUserReducer = persistReducer(
 export const store = configureStore({
   reducer: {
     auth: persistedAuthUserReducer,
+    infoUser: infoReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
