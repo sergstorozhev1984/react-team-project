@@ -6,16 +6,13 @@
   letter-spacing: 0.04em;
 }
 
-.mobileBurgerMenu,
-.tabletBurgerMenu {
-  background-color: transparent;
-  border: none;
-}
-
-.nonAuthBox,
-.authBox {
+.nonAuthBox {
   display: flex;
   width: 100%;
+}
+
+.authBox {
+  display: none;
 }
 
 .NavLink {
@@ -31,54 +28,11 @@
   color: #212121;
 }
 
-.authNavLinks {
-  display: none;
-}
-
-.userMenu {
-  /* margin-top: -15px;
-  margin-left: auto;
-  margin-right: 16px;
-  display: flex;
-  column-gap: 20px; */
-}
-
-.nickExitDiv {
-  display: flex;
-  column-gap: 16px;
-}
-
-.nickName {
-  composes: font;
-  text-align: right;
-  color: #212121;
-}
-
-.verticalLine {
-  margin-top: 5px;
-  display: block;
-  content: '';
-  width: 1px;
-  height: 32px;
-  background-color: #e0e0e0;
-}
-
-.exitBtn {
-  composes: font;
-  border: none;
-  background-color: transparent;
-  color: #9b9faa;
-}
-
-.tabletBurgerMenu {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
 }
 
 @media screen and (min-width: 1280px) {
-  .burgerMenu {
-    display: none;
+  .authBox {
+    display: flex;
   }
 }
