@@ -1,4 +1,15 @@
 @import-normalize; /* bring in normalize.css styles */
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   margin: 0;
@@ -19,15 +30,18 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
-ul {
-  padding: 0;
+ul,
+ol {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
+
 a {
   color: #212121;
   text-decoration: none;
@@ -35,18 +49,20 @@ a {
 
 img {
   display: block;
-  line-height: 0;
 }
 
 section {
   padding: 0px 20px;
   margin: 0 auto;
   width: 100%;
+
 }
 
 button {
   cursor: pointer;
+  line-height: 0;
 }
+
 
 @media screen and (min-width: 768px) {
   section {
