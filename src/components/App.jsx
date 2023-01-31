@@ -10,6 +10,7 @@ import { Layout } from './Layout/Layout';
 import PrivateRoute from './PrivateRoute/PrivatRouter';
 import PublicRoute from './PublicRoute/PublicRouter';
 import { Loader } from 'components/Loader/Loader';
+import DiaryPage from 'pages/DiaryPage/DiaryPage';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -21,14 +22,14 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      {isLoading && <Loader />}
+    <>
+      {isLoading && <Loader />}{' '}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/calculator" element={<CalculatorPage />} />
-            <Route path="/diary" element={<p>diary</p>} />
+            <Route path="/diary" element={<DiaryPage />} />
             <Route path="/main" element={<MainPage />} />
           </Route>
           <Route path="/" element={<PublicRoute />}>
@@ -37,6 +38,6 @@ export const App = () => {
           </Route>
         </Route>
       </Routes>
-    </div>
+    </>
   );
 };
