@@ -1,25 +1,84 @@
+.font {
+  font-family: 'Verdana';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+}
+
+.mobileBurgerMenu,
+.tabletBurgerMenu {
+  background-color: transparent;
+  border: none;
+}
+
+.nonAuthBox,
+.authBox {
+  display: flex;
+  width: 100%;
+}
+
 .NavLink {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #9B9FAA;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-family: 'Verdana';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+  composes: font;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #9b9faa;
+  text-transform: uppercase;
 }
 
 .NavLinkActive {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #212121;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-family: 'Verdana';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+  composes: NavLink;
+  color: #212121;
+}
+
+.authNavLinks {
+  display: none;
+}
+
+.userMenu {
+  /* margin-top: -15px;
+  margin-left: auto;
+  margin-right: 16px;
+  display: flex;
+  column-gap: 20px; */
+}
+
+.nickExitDiv {
+  display: flex;
+  column-gap: 16px;
+}
+
+.nickName {
+  composes: font;
+  text-align: right;
+  color: #212121;
+}
+
+.verticalLine {
+  margin-top: 5px;
+  display: block;
+  content: '';
+  width: 1px;
+  height: 32px;
+  background-color: #e0e0e0;
+}
+
+.exitBtn {
+  composes: font;
+  border: none;
+  background-color: transparent;
+  color: #9b9faa;
+}
+
+.tabletBurgerMenu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) {
+  .burgerMenu {
+    display: none;
+  }
 }

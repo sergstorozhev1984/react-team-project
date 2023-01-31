@@ -3,6 +3,10 @@
   .logoDesktop {
     display: none;
   }
+  .logoMobile {
+    margin: 20px;
+    margin-bottom: 16px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -12,6 +16,10 @@
   }
   .logoTablet {
     display: block;
+    margin-top: 20px;
+    margin-right: 32px;
+    margin-bottom: 16px;
+    margin-left: 32px;
   }
 }
 
@@ -22,5 +30,9 @@
   }
   .logoDesktop {
     display: block;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    margin-left: 16px;
   }
 }

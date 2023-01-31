@@ -1,4 +1,4 @@
-import { Container } from 'components/Conteiner/Container';
+import { Container } from 'components/Container/Container';
 import { LoginForm } from 'components/LoginForm/LoginForm';
 
 function LoginPage() {

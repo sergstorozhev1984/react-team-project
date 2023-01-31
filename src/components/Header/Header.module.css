@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.verticalLine {
+  display: none;
+}
+
+.navigationBox {
+  width: 100%;
+  margin-top: 38px;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .navigationBox {
+    margin-top: 37px;
+    margin-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    border-bottom: none;
+  }
+
+  .verticalLine {
+    display: block;
+    margin-top: 121px;
+    content: '';
+    width: 1px;
+    height: 32px;
+    background-color: #e0e0e0;
+  }
+
+  .navigationBox {
+    margin-top: 132px;
+    margin-right: auto;
+    margin-left: 0px;
+  }
+}
