@@ -1,149 +1,151 @@
-.sectionCalculate {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin: auto;
-    background-color: #fff;
-  }
-  
-  .containerCalculate {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto;
-    padding: 32px 20px 41px 20px;
-  }
-  
-  .headerCalculate {
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 140%;
-    margin-bottom: 32px;
-  }
-  
+.labelCalculate,
+.radioTitle {
+  font-family: 'Verdana';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+}
+
+.labelCalculate {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.radio {
+  margin-bottom: 40px;
+}
+
+.radioTitle {
+  padding: 4px 0;
+}
+
+.inputCalculate {
+  margin-left: 30px;
+  padding: 4px;
+  border: none;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+  width: 60px;
+}
+
+.labelCalculate::after {
+  content: '';
+  display: block;
+  width: 240px;
+  height: 1px;
+  background-color: #9b9faa;
+}
+
+.labelRadio {
+  font-family: 'Verdana';
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 0 24px;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+}
+
+.inputRadio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 25px;
+}
+
+.inputRadioStyled {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #9b9faa;
+  margin-left: -25px;
+}
+
+.inputRadio:checked + .inputRadioStyled::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #fc842d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.btnCalculate {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Verdana';
+  background-color: #fc842d;
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  padding: 13px 25px;
+}
+
+@media screen and (min-width: 768px) {
   .formCalculate {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 32px;
-    padding-bottom: 32px;
-  }
-  
-  .labelCalculate {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    color: #9B9FAA;
-  }
-  
-  .inputCalculate {
-    border: none;
-    border-bottom: 1px solid #9B9FAA;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    color: #9B9FAA;
-    width: 100%;
-  }
-  
-  .formRadioCalculate {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    padding-bottom: 32px;
-  }
-  
-  .radioBtn {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
-  }
-  
-  .inputRadioCalculate {
-    box-sizing: border-box;
-    appearance: none;
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    border: 1px solid #E0E0E0;
-    
+    width: 560px;
   }
 
-  .inputRadioCalculate:checked {
-    border: 1px solid #E0E0E0;
-    background: #FC842D;
-    background-size: contain;
-  }
-  
-  .formRadioCalculate label {
+  .wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 0 20px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    color: #9B9FAA;
+    margin-bottom: 60px;
+  }
+
+  .wrapperLeft {
+    margin-right: 32px;
+  }
+
+  .labelCalculate {
+    margin: 0;
+  }
+
+  .labelCalculate:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .labelCalculate::after {
+    margin-top: 14px;
   }
   
-  /* .formRadioCalculate {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    color: #9B9FAA;
-  } */
+  .radioTitle {
+    margin-bottom: 8px;
+  }
+  
+  .radioTitle::after {
+    content: '';
+    margin-top: 18px;
+    display: block;
+    width: 240px;
+    height: 1px;
+    background-color:#9B9FAA;
+  }
   
   .btnCalculate {
-    background-color: #FC842D;
-    box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
-    border-radius: 30px;
-    border: none;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.04em;
-    color: #FFFFFF;
-    padding: 13px 25px;
-    margin: 0 55px 0 55px;
+    display: inline-block;
   }
+}
 
-  @media screen and (min-width: 768px) {
-    .containerCalculate {
-        /* max-width: 490px; */
-        padding: 100px 32px 60px 32px;
-        padding-bottom: 48px;
-      }
-    
-      .formCalculate {
-        width: 600px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex-basis: calc((100% - 3 * 10px) / 2)
-      }
-    
-      .labelCalculate {
-        width: 240px;
-      }
-    
-      .formRadioCalculate {
-        width: 240px;
-      }
-    
-      .btnCalculate {
-        margin-left: 0;
-        width: 210px;
-      }
+@media screen and (min-width: 1280px) {
+  .btnCalculate {
+    margin-left: 339px;
   }
-
-  @media screen and (min-width: 1200px) {
-
-  }
+}

@@ -1,4 +1,15 @@
 @import-normalize; /* bring in normalize.css styles */
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   margin: 0;
@@ -12,4 +23,57 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #212121;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+section {
+  padding: 0px 20px;
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+button {
+  cursor: pointer;
+  line-height: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0px 32px;
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  section {
+    padding: 0px 16px;
+    width: 1280px;
+  }
 }

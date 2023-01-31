@@ -1,0 +1,78 @@
+.modalAdd {
+  padding: 80px 20px 180px 20px;
+  background-color: inherit;
+  position: relative;
+  height: 230px;
+  top: 85px;
+  left: 0;
+  margin-top: -145px;
+  /* z-index: 10; */
+  overflow: scroll;
+}
+
+.iconCross {
+  cursor: pointer;
+  font-size: 25px;
+  transform: rotate(45deg);
+  color: #9b9faa;
+  position: absolute;
+  top: 0;
+  transition: all 150ms linear;
+}
+.iconCross:hover {
+  color: #5f6163;
+}
+
+.mobileFormAdd {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  padding: 10px;
+}
+
+.mobileFormAdd input {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.mobileFormAdd label {
+  display: flex;
+  row-gap: 5px;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+
+  color: #9b9faa;
+}
+
+.mobileFormAdd button {
+  padding: 13px 46px;
+  background: #fc842d;
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+  border-radius: 30px;
+  width: 176px;
+  border: none;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 60px auto 20px auto;
+}
+
+.searchedProductsList {
+  border-radius: 8px;
+  padding: 10px;
+  max-height: 120px;
+  overflow-y: scroll;
+  background-color: #d5d5d5;
+}
+.positionWrapper {
+  margin-bottom: 30px;
+}
+.labelName {
+  margin-bottom: 32px;
+}

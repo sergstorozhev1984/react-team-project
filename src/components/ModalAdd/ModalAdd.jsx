@@ -1,11 +1,11 @@
-import React from 'react';
-import css from './DiaryAddProductForm.module.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { infoUser } from 'redux/info/info-operations';
+
+import css from './ModalAdd.module.css';
 import API from 'services/API';
 
-function DiaryAddProductForm({ startDate }) {
+function ModalAdd({ setShowMobileModalAdd, startDate, handleClickClose }) {
   const [searchedProducts, setSearchedProducts] = useState([]);
   const [isOpenSearcHedList, setIsOpenSearcHedList] = useState(false);
   const [searchedInputValue, setSearchedInputValue] = useState('');
@@ -19,7 +19,6 @@ function DiaryAddProductForm({ startDate }) {
     try {
       if (searchQuery) {
         const { data } = await API.searchProducts(searchQuery);
-        console.log(data);
         setSearchedProducts(data);
         setIsOpenSearcHedList(true);
       } else {
@@ -41,6 +40,10 @@ function DiaryAddProductForm({ startDate }) {
     setGrams(e.target.value);
   };
 
+  const handleIconCrossClick = () => {
+    document.body.style.overflow = 'auto';
+    setShowMobileModalAdd(false);
+  };
   const handleSubmit = async e => {
     e.preventDefault();
     const productData = {
@@ -54,49 +57,54 @@ function DiaryAddProductForm({ startDate }) {
     } catch (error) {
       console.log(error);
     }
+    handleClickClose();
   };
   return (
-    <div className={css.block}>
-      <form className={css.diaryForm} onSubmit={handleSubmit}>
-        <label>
-          <span>Enter product name</span>
+    //  <section>
+    <div className={css.modalAdd}>
+      <span className={css.iconCross} onClick={handleIconCrossClick}>
+        +
+      </span>
+      <form className={css.mobileFormAdd} onSubmit={handleSubmit}>
+        <label className={css.labelName}>
+          Enter product name
           <input
             type="text"
-            className={css.inputName}
             value={searchedInputValue}
             onChange={handleChange}
             required
           />
         </label>
         <label>
-          <span>Grams</span>
+          Grams
           <input
             type="number"
-            className={css.inputGram}
             value={grams}
             onChange={handleChangeGrams}
             required
           />
         </label>
 
-        <button>+</button>
+        <button type="submit">Add</button>
       </form>
-
       {isOpenSearcHedList && (
-        <div className={css.searchedListWrapper}>
-          {searchedProducts.length > 0 && (
-            <ul className={css.searchedProductsList}>
-              {searchedProducts.map(product => (
-                <li key={product._id} id={product._id} onClick={handleClick}>
-                  {product.title.ua} <hr />
-                </li>
-              ))}
-            </ul>
-          )}
+        <div className={css.positionWrapper}>
+          <div className={css.searchedListWrapper}>
+            {searchedProducts.length > 0 && (
+              <ul className={css.searchedProductsList}>
+                {searchedProducts.map(product => (
+                  <li key={product._id} id={product._id} onClick={handleClick}>
+                    {product.title.ua} <hr />
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       )}
     </div>
+    //  </section>
   );
 }
 
-export default DiaryAddProductForm;
+export default ModalAdd;
