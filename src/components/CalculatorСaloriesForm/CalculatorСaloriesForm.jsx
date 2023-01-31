@@ -3,75 +3,74 @@ import css from './CalculatorСaloriesForm.module.css';
 
 function CalculatorСaloriesForm() {
   return (
-    <section className={css.sectionCalculate}>
-    <div className={css.containerCalculate}>
-      <h3 className={css.headerCalculate}>
-        Calculate your daily calorie intake right now
-      </h3>
-      <form className={css.formCalculate}>
-        <label className={css.labelCalculate}>
-          Height *
-          <input className={css.inputCalculate} type="text" name="name" />
-        </label>
-        <label className={css.labelCalculate}>
-          Age *
-          <input className={css.inputCalculate} type="text" name="name" />
-        </label>
-        <label className={css.labelCalculate}>
-          Current weight *
-          <input className={css.inputCalculate} type="text" name="name" />
-        </label>
-        <label className={css.labelCalculate}>
-          Desired weight *
-          <input className={css.inputCalculate} type="text" name="name" />
-        </label>
-        <div className={css.radioBtn}>
-        <p className={css.labelCalculate}>Blood type *</p>
-          <label className={css.labelRadioCalculate}>
-            <input
-              className={css.inputRadioCalculate}
-              type="radio"
-              name="color"
-              value="1"
-              checked
-            />
-            1
+    <form className={css.formCalculate}>
+      <div className={css.wrapper}>
+        <div className={css.wrapperLeft}>
+          <label className={css.labelCalculate}>
+            Height *
+            <input className={css.inputCalculate} type="text" name="name" />
           </label>
-          <label className={css.labelRadioCalculate}>
-            <input
-              className={css.inputRadioCalculate}
-              type="radio"
-              name="color"
-              value="2"
-            />
-            2
+          <label className={css.labelCalculate}>
+            Age *
+            <input className={css.inputCalculate} type="text" name="name" />
           </label>
-          <label className={css.labelRadioCalculate}>
-            <input
-              className={css.inputRadioCalculate}
-              type="radio"
-              name="color"
-              value="3"
-            />
-            3
-          </label>
-          <label className={css.labelRadioCalculate}>
-            <input
-              className={css.inputRadioCalculate}
-              type="radio"
-              name="color"
-              value="4"
-            />
-            4
+          <label className={css.labelCalculate}>
+            Current weight *
+            <input className={css.inputCalculate} type="text" name="name" />
           </label>
         </div>
-        </form>
+        <div className={css.wrapperRight}>
+          <label className={css.labelCalculate}>
+            Desired weight *
+            <input className={css.inputCalculate} type="text" name="name" />
+          </label>
+          <div className={css.radio}>
+            <p className={css.radioTitle}>Blood type *</p>
+            <label className={css.labelRadio}>
+              <input
+                className={css.inputRadio}
+                type="radio"
+                name="color"
+                value="1"
+                checked
+              />
+              <span className={css.inputRadioStyled}></span>1
+            </label>
+            <label className={css.labelRadio}>
+              <input
+                className={css.inputRadio}
+                type="radio"
+                name="color"
+                value="2"
+              />
+              <span className={css.inputRadioStyled}></span>2
+            </label>
+            <label className={css.labelRadio}>
+              <input
+                className={css.inputRadio}
+                type="radio"
+                name="color"
+                value="3"
+              />
+              <span className={css.inputRadioStyled}></span>3
+            </label>
+            <label className={css.labelRadio}>
+              <input
+                className={css.inputRadio}
+                type="radio"
+                name="color"
+                value="4"
+              />
+              <span className={css.inputRadioStyled}></span>4
+            </label>
+          </div>
+        </div>
+      </div>
       <button className={css.btnCalculate} type="submit">
         Start losing weight
       </button>
-    </div>
-  </section>
-  )
+    </form>
+  );
 }
 
 export default CalculatorСaloriesForm;
