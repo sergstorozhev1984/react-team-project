@@ -18,6 +18,7 @@ function Header() {
           <Logo />
         </Link>
         <span className={css.verticalLine}></span>
+        
         <div className={css.navigationBox}>
           <Navigation />
         </div>

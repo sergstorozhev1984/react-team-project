@@ -18,7 +18,7 @@ import { infoReducer } from './info/info-slice';
 const persistConfig = {
   key: 'auth-user',
   storage,
-  whitelist: ['sid', 'refreshToken'],
+  whitelist: ['sid', 'refreshToken', 'token'],
 };
 export const persistedAuthUserReducer = persistReducer(
   persistConfig,

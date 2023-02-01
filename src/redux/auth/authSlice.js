@@ -77,13 +77,7 @@ const userSlice = createSlice({
         state.isLoading = true;
         state.error = null;
       })
-      // .addCase(userRefreshThunk.fulfilled, (state, { payload }) => {
-      //   state.isLoading = false;
-      //   // state.user = payload.user;
-      //   state.isLoggedIn = true;
-      //   state.refreshToken = payload.newRefreshToken;
-      //   state.sid = payload.sid;
-      // })
+
       .addCase(userRefreshThunk.fulfilled, hadleUserLogin)
       .addCase(userRefreshThunk.rejected, (state, { payload }) => {
         state.isLoading = false;

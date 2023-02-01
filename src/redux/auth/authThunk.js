@@ -77,7 +77,7 @@ export const userRefreshThunk = createAsyncThunk(
       token.set(newAccessToken);
 
       const data = await userGetInfo();
-
+  
       return {
         user: data,
         sid,

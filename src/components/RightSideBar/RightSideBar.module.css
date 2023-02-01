@@ -73,10 +73,10 @@
     background-image: url('../../images/RightSideBar/bg-rightsidebar-desktop.png');
     background-repeat: no-repeat;
     background-position: right;
-
-    padding-top: 500px;
+    background-position-y: 10px;
     z-index: -1;
     height: 1152px;
+    padding-top: 329px;
   }
   .summaryRightSideBar {
     width: 288px;

@@ -1,3 +1,4 @@
+import { Container } from 'components/Container/Container';
 import { RightSideBar } from 'components/RightSideBar/RightSideBar';
 import React from 'react';
 import CalculatorСaloriesForm from '../../components/CalculatorСaloriesForm/CalculatorСaloriesForm';
@@ -7,7 +8,8 @@ function CalculatorPage() {
   
 
   return (
-    <main className={css.main}>
+    <Container className={css.main}>
+      <div className={css.calculatopPageWrappew}>
       <section className={css.section}>
         <h1 className={css.headerCalculate}>
           Calculate your daily calorie intake right now
@@ -17,7 +19,8 @@ function CalculatorPage() {
       <section className={css.sectionSummary}>
         <RightSideBar />
       </section>
-    </main>
+      </div>
+    </Container>
   );
 }
 

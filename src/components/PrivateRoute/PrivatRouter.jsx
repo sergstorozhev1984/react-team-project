@@ -4,7 +4,7 @@ import { selectorToken } from 'redux/selector/selector';
 
 const PrivateRoute = () => {
   const token = useSelector(selectorToken);
-  return token ? <Outlet /> : <Navigate to="/diary" />;
+  return token ? <Outlet /> : <Navigate to="/" />;
 };
 
 export default PrivateRoute;
