@@ -36,6 +36,13 @@
   .flexContainer {
     max-width: 625px;
   }
+  
+  .dairyPageWrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: -325px;
+  }
 }
 
 .datePickerWrapper {
