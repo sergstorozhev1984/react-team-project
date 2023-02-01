@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { infoUser } from 'redux/info/info-operations';
 import { useMediaQuery } from 'react-responsive';
 import ModalAdd from 'components/ModalAdd/ModalAdd';
+import { Container } from 'components/Container/Container';
 
 function DiaryPage() {
   const [startDate, setStartDate] = useState(new Date());
@@ -36,7 +37,7 @@ function DiaryPage() {
   };
 
   return (
-    <section>
+    <Container>
       <div className={css.flexContainer}>
         <div className={css.dateWrapper}>
           <span className={css.date}>{normalizedDate}</span>
@@ -89,7 +90,7 @@ function DiaryPage() {
 
         {/* <RightSideBar startDate={normalizedDate} /> */}
       </div>
-    </section>
+    </Container>
   );
 }
 
