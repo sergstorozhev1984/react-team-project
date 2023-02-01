@@ -4,6 +4,8 @@ import CalculatorСaloriesForm from '../../components/CalculatorСaloriesForm/Ca
 import css from './/CalculatorPage.module.css';
 
 function CalculatorPage() {
+  
+
   return (
     <main className={css.main}>
       <section className={css.section}>

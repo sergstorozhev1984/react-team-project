@@ -66,6 +66,7 @@ const userSlice = createSlice({
         state.isLoading = false;
         state.user = null;
         state.token = null;
+        state.isLoggedIn = false;
       })
       .addCase(logOutThunk.rejected, (state, { payload }) => {
         state.isLoading = false;
