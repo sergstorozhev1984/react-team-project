@@ -1,4 +1,4 @@
-import { Container } from 'components/Conteiner/Container';
+import { Container } from 'components/Container/Container';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 // import { useNavigate } from 'react-router';

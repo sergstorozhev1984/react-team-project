@@ -25,6 +25,7 @@ const hadleUserLogin = (
   state.isLoggedIn = true;
   state.sid = sid;
   state.refreshToken = refreshToken;
+  state.isLoading = false;
 };
 
 const userSlice = createSlice({
