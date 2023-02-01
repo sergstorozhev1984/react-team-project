@@ -17,11 +17,11 @@
   .main {
     background-image: url(../../images/MainPageTablet/bgTablet.png);
     background-repeat: no-repeat;
-    background-position: 0 361px;
+    background-position: 0 530px;
   }
   .section {
     padding-top: 100px;
-    padding-bottom: 398px;
+    padding-bottom: 698px;
   }
 
   .headerCalculate {

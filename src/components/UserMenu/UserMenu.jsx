@@ -6,8 +6,12 @@ export const UserMenu = () => {
   const userNickName = useSelector(state => state.auth?.user?.username);
   const dispatch = useDispatch();
 
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+  console.log(isLoggedIn);
+  const userMenuStyles = isLoggedIn ? css.userMenuBgc:css.userMenu;
+
   return (
-    <div className={css.userMenu}>
+    <div className={userMenuStyles}>
       <p className={css.nickName}>{userNickName}</p>
       <span className={css.verticalLine}></span>
       <button

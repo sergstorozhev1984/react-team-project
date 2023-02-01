@@ -12,7 +12,8 @@ function Header() {
   const linkTo = token ? '/diary' : '/login';
 
   return (
-    <Container>
+    // <Container>
+    <>
       <header className={css.header}>
         <Link to={linkTo}>
           <Logo />
@@ -33,7 +34,8 @@ function Header() {
           <UserMenu />
         </div>
       )}
-    </Container>
+    {/* </Container> */}
+    </>
   );
 }
 

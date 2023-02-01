@@ -7,7 +7,7 @@ import css from './Layout.module.css'
 export const Layout = () => {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
   console.log(isLoggedIn);
-  const layoutStyles = isLoggedIn ?css.bgDesktopWithoutBg  : css.bgDesktop;
+  const layoutStyles = isLoggedIn ? css.bgDesktopWithoutBg  : css.bgDesktop;
   
   return (
     <div className={layoutStyles}>
