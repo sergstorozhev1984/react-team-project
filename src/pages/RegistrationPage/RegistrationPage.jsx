@@ -1,4 +1,4 @@
-import { Container } from 'components/Conteiner/Container';
+import { Container } from 'components/Container/Container';
 import { RegistrationForm } from 'components/RegistrationForm/RegistrationForm';
 
 function RegistrationPage() {

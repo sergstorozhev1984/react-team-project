@@ -1,4 +1,4 @@
-import { Container } from 'components/Conteiner/Container';
+import { Container } from 'components/Container/Container';
 import React from 'react';
 import css from './MainPage.module.css';
 import CalculatorСaloriesForm from '../../components/CalculatorСaloriesForm/CalculatorСaloriesForm';

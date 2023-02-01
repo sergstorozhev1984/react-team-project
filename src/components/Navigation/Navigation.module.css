@@ -1,25 +1,38 @@
+.font {
+  font-family: 'Verdana';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+}
+
+.nonAuthBox {
+  display: flex;
+  width: 100%;
+}
+
+.authBox {
+  display: none;
+}
+
 .NavLink {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #9B9FAA;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-family: 'Verdana';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+  composes: font;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #9b9faa;
+  text-transform: uppercase;
 }
 
 .NavLinkActive {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #212121;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-family: 'Verdana';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+  composes: NavLink;
+  color: #212121;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) {
+  .authBox {
+    display: flex;
+  }
 }
