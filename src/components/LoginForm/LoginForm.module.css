@@ -16,6 +16,10 @@
         margin-right: auto;
     }
 
+    .BoxFormLogin {
+        padding: 160px 0 255px 0;
+    }
+
     .LableLoginForm {
         display: flex;
         flex-direction: column;
@@ -102,5 +106,17 @@
 
     .InputLogin {
         width: 240px;
+    }
+    .BoxFormLogin {
+        padding: 160px 0 500px 0;
+        background-image: url(../../images/BcgLoginRegister/Bcg@1x.png);
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .BoxFormLogin {
+        padding: 160px 0 255px 0;
+        background-image: none
     }
 }

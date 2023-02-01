@@ -1,6 +1,7 @@
 .bgDesktopWithoutBg {
     background-image: none;
 }
+
 @media screen and (min-width: 1280px) {
     .bgDesktop {
         background-image: url(../../images/MainPageDesktop/bgDesktop.png);
