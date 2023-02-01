@@ -50,6 +50,7 @@ export const RightSideBar = () => {
                         <p className={css.text}>n% of normal</p>
                            {nOfNorm > 100 ?
                             <p className={css.redtext}>{nOfNorm ? Math.round(nOfNorm) : '0'} %</p> :
+                            
                 //  умова - якщо відсоток більше 100, то виводимо дані червоним шрифтом 
                 // округлене до найближчого цілого числа (Math.round)
                             <p className={css.text}>{nOfNorm ? Math.round(nOfNorm) : '0'} %</p> 
