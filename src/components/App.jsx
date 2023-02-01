@@ -23,7 +23,7 @@ export const App = () => {
 
   return (
     <>
-      {isLoading && <Loader />}{' '}
+      {isLoading && <Loader />}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
