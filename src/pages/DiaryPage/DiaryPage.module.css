@@ -3,6 +3,7 @@
   flex-direction: column;
 }
 .dateWrapper {
+  margin-top: 145px;
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -13,9 +14,27 @@
   font-weight: 700;
 }
 
+@media screen and (max-width: 767px) {
+  .dateWrapper {
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .dateWrapper {
+    margin-top: 100px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .date {
     font-size: 34px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .flexContainer {
+    max-width: 625px;
   }
 }
 
