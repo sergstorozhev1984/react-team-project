@@ -56,10 +56,13 @@
     width: 768px;
     margin: 0;
     padding: 60px 32px;
-
+    background-image: url('../../images/RightSideBar/bg-rightsidebar-tablet.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
     display: flex;
     justify-content: space-between;
     gap: 80px;
+    height: 300px;
   }
 }
 
@@ -67,8 +70,11 @@
   .containerTitle {
     display: block;
     width: 517px;
+    background-image: url('../../images/RightSideBar/bg-rightsidebar-desktop.png');
+    background-repeat: no-repeat;
+    background-position: right;
 
-    padding-top: 450px;
+    padding-top: 500px;
     z-index: -1;
     height: 1152px;
   }
