@@ -1,15 +1,17 @@
 import Modal from 'components/Modal/Modal';
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { fetchCalorie } from 'redux/authModal/modalThunk';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCalorie, fetchCalorieForUser } from 'redux/authModal/modalThunk';
 import css from './CalculatorСaloriesForm.module.css';
 function CalculatorСaloriesForm() {
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+ const userId = useSelector(state => state.auth?.user?.id);
   const [formData, setFormData] = useState({
-    height: '',
-    age: '',
-    weight: '',
-    desiredWeight: '',
-    bloodType: '1',
+    height: '185',
+    age: '40',
+    weight: '100',
+    desiredWeight: '80',
+    bloodType: '2',
   });
   const dispatch = useDispatch();
   const [isModalOpen, setIsOpen] = useState(false);
@@ -19,8 +21,14 @@ function CalculatorСaloriesForm() {
   const handleSubmit = event => {
     event.preventDefault();
     const formData = { weight, height, age, desiredWeight, bloodType };
-    dispatch(fetchCalorie(formData));
-    setFormData({
+    if(isLoggedIn) {
+      console.log('logged user');
+      dispatch(fetchCalorieForUser({userId, formData}));
+    } else {
+       dispatch(fetchCalorie(formData));
+    
+    }
+   setFormData({
       weight: '',
       height: '',
       age: '',

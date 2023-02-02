@@ -24,3 +24,8 @@ export const getCalorie = async data => {
   const result = await userPublicAPI.post('daily-rate', data);
   return result.data;
 };
+
+export const getCalorieForUser = async (userId, data) => {
+  const result = await userPrivateAPI.post(`daily-rate/${userId}`, data);
+  return result.data;
+};
