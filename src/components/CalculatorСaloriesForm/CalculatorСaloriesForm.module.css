@@ -1,0 +1,151 @@
+.labelCalculate,
+.radioTitle {
+  font-family: 'Verdana';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+}
+
+.labelCalculate {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.radio {
+  margin-bottom: 40px;
+}
+
+.radioTitle {
+  padding: 4px 0;
+  margin-bottom: 3px;
+}
+
+.inputCalculate {
+  margin-left: 30px;
+  padding: 4px;
+  border: none;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+  width: 60px;
+}
+
+.labelCalculate::after {
+  content: '';
+  display: block;
+  width: 240px;
+  height: 1px;
+  background-color: #9b9faa;
+}
+
+.labelRadio {
+  font-family: 'Verdana';
+  cursor: pointer;
+  padding: 0 29px;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+}
+
+.inputRadio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 28px;
+}
+
+.inputRadioStyled {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #9b9faa;
+  margin-left: -32px;
+}
+
+.inputRadio:checked + .inputRadioStyled::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #fc842d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.btnCalculate {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Verdana';
+  background-color: #fc842d;
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  padding: 13px 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .formCalculate {
+    width: 560px;
+  }
+
+  .wrapper {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  .wrapperLeft {
+    margin-right: 32px;
+  }
+
+  .labelCalculate {
+    margin: 0;
+  }
+
+  .labelCalculate:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .labelCalculate::after {
+    margin-top: 14px;
+  }
+  
+  .radioTitle {
+    margin-bottom: 8px;
+  }
+  
+  .radioTitle::after {
+    content: '';
+    margin-top: 18px;
+    display: block;
+    width: 240px;
+    height: 1px;
+    background-color:#9B9FAA;
+  }
+  
+  .btnCalculate {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .btnCalculate {
+    margin-left: 339px;
+  }
+}

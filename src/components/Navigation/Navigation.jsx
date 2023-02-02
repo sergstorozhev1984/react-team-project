@@ -1,11 +1,15 @@
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+
 import css from './Navigation.module.css';
 
 function Navigation() {
+  const token = useSelector(state => state.auth?.token);
+
   return (
-    <div>
-      <header>
-        <nav>
+    <nav>
+      {!token ? (
+        <div className={css.nonAuthBox}>
           <NavLink
             className={({ isActive }) =>
               isActive ? css.NavLinkActive : css.NavLink
@@ -14,7 +18,6 @@ function Navigation() {
           >
             Register
           </NavLink>
-
           <NavLink
             className={({ isActive }) =>
               isActive ? css.NavLinkActive : css.NavLink
@@ -23,12 +26,28 @@ function Navigation() {
           >
             Login
           </NavLink>
-
-          <NavLink to="/diary">Diary</NavLink>
-          <NavLink to="/calculator">Calculator</NavLink>
-        </nav>
-      </header>
-    </div>
+        </div>
+      ) : (
+        <div className={css.authBox}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? css.NavLinkActive : css.NavLink
+            }
+            to="/diary"
+          >
+            Diary
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? css.NavLinkActive : css.NavLink
+            }
+            to="/calculator"
+          >
+            Calculator
+          </NavLink>
+        </div>
+      )}
+    </nav>
   );
 }
 

@@ -1,10 +1,10 @@
-// import { useSelector } from 'react-redux';
-// import { Navigate, Outlet } from 'react-router-dom';
-// import { selectorToken } from 'redux/selector';
+import { useSelector } from 'react-redux';
+import { Navigate, Outlet } from 'react-router-dom';
+import { selectorToken } from 'redux/selector/selector';
 
-const PrivateRoute = () => {
-  //   const token = useSelector(selectorToken);
-  //   return token ? <Outlet /> : <Navigate to="/login" />;
+const PublicRoute = () => {
+  const token = useSelector(selectorToken);
+  return token ? <Navigate to="/calculator" /> : <Outlet />;
 };
 
-export default PrivateRoute;
+export default PublicRoute;

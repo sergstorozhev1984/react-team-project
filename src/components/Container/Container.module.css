@@ -1,0 +1,33 @@
+.BoxContainer {
+    width: 1280px;
+    padding: 0 16px 0 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 320px) {
+.BoxContainer {
+    width: 320px;
+    padding: 0 20px 0 20px;
+    }
+}
+
+/* @media screen and (min-width: 480px) {
+    .BoxContainer {
+        width: 480px;
+    }
+} */
+
+@media screen and (min-width: 768px) {
+.BoxContainer {
+    width: 768px;
+    padding: 0 32px 0 32px;
+    }
+}
+@media screen and (min-width: 1280px) {
+.BoxContainer {
+    width: 1280px;
+    padding: 0 16px 0 16px;
+    }
+}
+

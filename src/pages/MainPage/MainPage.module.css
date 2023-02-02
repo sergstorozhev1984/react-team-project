@@ -1,0 +1,51 @@
+.section {
+  padding-top: 32px;
+  padding-bottom: 100px;
+}
+
+.headerCalculate {
+  font-family: 'Verdana';
+  max-width: 280px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 34px;
+  color: #212121;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    background-image: url(../../images/MainPageTablet/bgTablet.png);
+    background-repeat: no-repeat;
+    background-position: 0 361px;
+  }
+  .section {
+    padding-top: 100px;
+    padding-bottom: 398px;
+  }
+
+  .headerCalculate {
+    font-size: 34px;
+    max-width: 560px;
+    margin-bottom: 68px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main {
+    background-image: none;
+    /* background-image: url(../../images/MainPageDesktop/bgDesktop.png);
+    background-repeat: no-repeat;
+    background-position: 300px 0; */
+  }
+  .section {
+    padding-top: 144px;
+    padding-bottom: 111px;
+  }
+
+  .headerCalculate {
+    font-size: 34px;
+    max-width: 560px;
+    margin-bottom: 68px;
+  }
+}

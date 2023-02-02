@@ -1,0 +1,36 @@
+.logoTablet,
+.logoDesktop {
+  display: none;
+}
+.logoMobile {
+  margin: 20px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .logoMobile,
+  .logoDesktop {
+    display: none;
+  }
+  .logoTablet {
+    display: block;
+    margin-top: 20px;
+    margin-right: 32px;
+    margin-bottom: 16px;
+    margin-left: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .logoMobile,
+  .logoTablet {
+    display: none;
+  }
+  .logoDesktop {
+    display: block;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+}

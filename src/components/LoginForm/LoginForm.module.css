@@ -1,0 +1,122 @@
+@media screen and (min-width: 320px) {
+
+    .TitleLogin {
+        color: #FC842D;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        text-align: center;
+        width: 254px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .BoxFormLogin {
+        padding: 160px 0 255px 0;
+    }
+
+    .LableLoginForm {
+        display: flex;
+        flex-direction: column;
+        color: #9B9FAA;
+        margin-bottom: 60px;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+
+    }
+
+    .InputLogin {
+        width: 280px;
+        height: 16px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+
+    .FormLogin {
+        display: flex;
+        flex-direction: column;
+        width: 285px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .BtnLogin {
+        margin-right: auto;
+        margin-left: auto;
+        width: 182px;
+        height: 44px;
+        border-radius: 30px;
+        border: 1px solid #FC842D;
+        color: #FC842D;
+        background-color: #FFFFFF;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.04em;
+        padding: 13px 37px;
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .BtnLogin:hover,
+    .BtnLogin:active {
+        box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+        border: none;
+        color: #FFFFFF;
+        background-color: #FC842D;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .TitleLogin {
+        text-align: start;
+    }
+
+    .BtnLogin {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .FormLogin {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .TitleLogin {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .InputLogin {
+        width: 240px;
+    }
+    .BoxFormLogin {
+        padding: 160px 0 500px 0;
+        background-image: url(../../images/BcgLoginRegister/Bcg@1x.png);
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .BoxFormLogin {
+        padding: 160px 0 255px 0;
+        background-image: none
+    }
+}
