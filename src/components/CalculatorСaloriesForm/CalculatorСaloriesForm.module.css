@@ -68,7 +68,7 @@
   height: 20px;
   border-radius: 50%;
   border: 1px solid #9b9faa;
-  margin-left: -28px;
+  margin-left: -32px;
 }
 
 .inputRadio:checked + .inputRadioStyled::before {
