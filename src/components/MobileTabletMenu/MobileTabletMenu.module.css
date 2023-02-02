@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  position: fixed;
   align-items: center;
   top: 0;
   min-width: 320px;
