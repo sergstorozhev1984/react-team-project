@@ -29,6 +29,7 @@ function CalculatorСaloriesForm() {
     });
   };
   const { weight, height, age, desiredWeight, bloodType } = formData;
+
   return (
     <>
       <form className={css.formCalculate} onSubmit={handleSubmit}>
