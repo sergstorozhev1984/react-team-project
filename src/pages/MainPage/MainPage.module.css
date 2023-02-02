@@ -17,7 +17,7 @@
   .main {
     background-image: url(../../images/MainPageTablet/bgTablet.png);
     background-repeat: no-repeat;
-    background-position: 0 461px;
+    background-position: 0 361px;
   }
   .section {
     padding-top: 100px;
@@ -33,9 +33,10 @@
 
 @media screen and (min-width: 1280px) {
   .main {
-    background-image: url(../../images/MainPageDesktop/bgDesktop.png);
+    background-image: none;
+    /* background-image: url(../../images/MainPageDesktop/bgDesktop.png);
     background-repeat: no-repeat;
-    background-position: 300px 0;
+    background-position: 300px 0; */
   }
   .section {
     padding-top: 144px;
