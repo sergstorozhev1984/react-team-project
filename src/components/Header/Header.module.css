@@ -1,6 +1,10 @@
 .header {
+  position: relative;
   display: flex;
-  width: 100%;
+  width: 320px;
+  z-index: 3;
+  background-color: #ffffff;
+  border-bottom: 2px solid #E0E0E0;
 }
 
 .verticalLine {
@@ -19,12 +23,15 @@
 
 .mobileUserMenuDiv {
   background-color: #eff1f3;
-  width: 100%;
+  width: 320px;
   display: flex;
   justify-content: flex-end;
 }
 
 @media screen and (min-width: 768px) {
+  .header{
+    width: 768px;
+  }
   .navigationBox {
     margin-top: 37px;
     margin-right: 32px;
@@ -43,7 +50,9 @@
 
 @media screen and (min-width: 1280px) {
   .header {
+    width: 1280px;
     border-bottom: none;
+    background-color: transparent;
   }
 
   .verticalLine {

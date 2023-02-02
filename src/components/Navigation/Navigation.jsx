@@ -1,10 +1,11 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+
 import css from './Navigation.module.css';
 
 function Navigation() {
-  const token = useSelector(state => state.auth.token);
-  
+  const token = useSelector(state => state.auth?.token);
+
   return (
     <nav>
       {!token ? (
