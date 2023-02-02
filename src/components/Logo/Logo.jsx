@@ -1,6 +1,7 @@
 import logoMobile from 'images/logo/logoMobile.png';
 import logoTablet from 'images/logo/logoTablet.png';
 import logoDesktop from 'images/logo/logoDesktop.png';
+
 import css from './Logo.module.css';
 
 export const Logo = () => {
