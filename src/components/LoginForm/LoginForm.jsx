@@ -45,11 +45,11 @@ export const LoginForm = () => {
     <Container>
       <div className={css.BoxFormLogin}>
         <h2 className={css.TitleLogin}>Login</h2>
-        <form className={css.FormLogin} onSubmit={handleSubmit} autoComplete={true}>
+        <form className={css.FormLogin} onSubmit={handleSubmit} >
           <label className={css.LableLoginForm}>
             E-mail *
             <input
-            autoComplete={true}
+            autoComplete='on'
               className={css.InputLogin}
               name="email"
               type="email"
@@ -61,7 +61,7 @@ export const LoginForm = () => {
           <label className={css.LableLoginForm}>
             Password *
             <input
-            autoComplete={true}
+              autoComplete='on'
               className={css.InputLogin}
               name="password"
               type="password"

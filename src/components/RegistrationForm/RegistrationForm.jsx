@@ -40,11 +40,8 @@ export const RegistrationForm = () => {
       password,
     };
     dispatch(registerThunk(formData));
-    //   .unwrap()
-    //   .then(() => dispatch(loginThunk({ email, password })))
-    //   .catch(error => console.log(error));
+    
     reset();
-    // navigate('/calculator');
   };
 
   const reset = () => {

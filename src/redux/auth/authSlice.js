@@ -38,11 +38,7 @@ const userSlice = createSlice({
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(registerThunk.fulfilled, (state, { payload }) => {
-        state.isLoading = false;
-        state.user = payload.user;
-        state.token = payload;
-      })
+      .addCase(registerThunk.fulfilled, hadleUserLogin)
       .addCase(registerThunk.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.error = payload;
@@ -56,6 +52,7 @@ const userSlice = createSlice({
       .addCase(loginThunk.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.error = payload;
+      
       })
       //   ///////////////////////logOut////////////////////////////////////////////////
       .addCase(logOutThunk.pending, state => {

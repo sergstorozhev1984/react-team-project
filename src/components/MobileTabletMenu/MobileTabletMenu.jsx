@@ -21,7 +21,6 @@ function MobileTabletMenu({ closeMenu }) {
   });
 
   const handleKeyDown = e => {
-    console.log(e);
     if (e.code === 'Escape') {
       closeMenu();
     }

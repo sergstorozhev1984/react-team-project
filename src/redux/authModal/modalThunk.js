@@ -22,7 +22,6 @@ export const fetchCalorieForUser = createAsyncThunk(
     try {
       token.set(accessToken)
       const result = await getCalorieForUser(userId, formData);
-      console.log(result);
       return result;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

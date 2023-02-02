@@ -5,7 +5,6 @@ import CalculatorСaloriesForm from '../../components/CalculatorСaloriesForm/Ca
 import css from './/CalculatorPage.module.css';
 
 function CalculatorPage() {
-  
 
   return (
     <Container className={css.main}>
