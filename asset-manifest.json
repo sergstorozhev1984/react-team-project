@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/react-team-project/static/css/main.e61085ae.css",
-    "main.js": "/react-team-project/static/js/main.6f04279f.js",
+    "main.css": "/react-team-project/static/css/main.53af9e12.css",
+    "main.js": "/react-team-project/static/js/main.ec20aa79.js",
+    "static/media/bgDesktop.png": "/react-team-project/static/media/bgDesktop.d4b2ed4b094d182e2967.png",
+    "static/media/Bcg@1x.png": "/react-team-project/static/media/Bcg@1x.81794f9de11adfc5e747.png",
+    "static/media/bgTablet.png": "/react-team-project/static/media/bgTablet.93a1969f8871fea29e7e.png",
+    "static/media/bg-rightsidebar-desktop.png": "/react-team-project/static/media/bg-rightsidebar-desktop.07ec7143c40752d1b8ad.png",
+    "static/media/bg-rightsidebar-tablet.png": "/react-team-project/static/media/bg-rightsidebar-tablet.3cf507fc5063b80c0790.png",
     "index.html": "/react-team-project/index.html",
-    "main.e61085ae.css.map": "/react-team-project/static/css/main.e61085ae.css.map",
-    "main.6f04279f.js.map": "/react-team-project/static/js/main.6f04279f.js.map"
+    "main.53af9e12.css.map": "/react-team-project/static/css/main.53af9e12.css.map",
+    "main.ec20aa79.js.map": "/react-team-project/static/js/main.ec20aa79.js.map"
   },
   "entrypoints": [
-    "static/css/main.e61085ae.css",
-    "static/js/main.6f04279f.js"
+    "static/css/main.53af9e12.css",
+    "static/js/main.ec20aa79.js"
   ]
 }
