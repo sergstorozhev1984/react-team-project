@@ -4,18 +4,18 @@ import { useDispatch } from 'react-redux';
 import { fetchCalorie } from 'redux/authModal/modalThunk';
 import css from './CalculatorСaloriesForm.module.css';
 function CalculatorСaloriesForm() {
-  const [selectedOption, setSelectedOption] = useState('1');
   const [formData, setFormData] = useState({
     height: '',
     age: '',
     weight: '',
     desiredWeight: '',
-    bloodType: '',
+    bloodType: '1',
   });
   const dispatch = useDispatch();
   const [isModalOpen, setIsOpen] = useState(false);
   const openModal = () => setIsOpen(true);
   const toggle = () => setIsOpen(isOpen => !isOpen);
+
   const handleSubmit = event => {
     event.preventDefault();
     const formData = { weight, height, age, desiredWeight, bloodType };
@@ -97,8 +97,10 @@ function CalculatorСaloriesForm() {
                   type="radio"
                   name="bloodType"
                   value="1"
-                  checked={selectedOption === '1'}
-                  onChange={e => setSelectedOption(e.target.value)}
+                  checked={formData.bloodType === '1'}
+                  onChange={e =>
+                    setFormData({ ...formData, bloodType: e.target.value })
+                  }
                 />
                 <span className={css.inputRadioStyled}></span>
               </label>
@@ -109,8 +111,10 @@ function CalculatorСaloriesForm() {
                   type="radio"
                   name="bloodType"
                   value="2"
-                  checked={selectedOption === '2'}
-                  onChange={e => setSelectedOption(e.target.value)}
+                  checked={formData.bloodType === '2'}
+                  onChange={e =>
+                    setFormData({ ...formData, bloodType: e.target.value })
+                  }
                 />
                 <span className={css.inputRadioStyled}></span>
               </label>
@@ -121,8 +125,10 @@ function CalculatorСaloriesForm() {
                   type="radio"
                   name="bloodType"
                   value="3"
-                  checked={selectedOption === '3'}
-                  onChange={e => setSelectedOption(e.target.value)}
+                  checked={formData.bloodType === '3'}
+                  onChange={e =>
+                    setFormData({ ...formData, bloodType: e.target.value })
+                  }
                 />
                 <span className={css.inputRadioStyled}></span>
               </label>
@@ -133,8 +139,10 @@ function CalculatorСaloriesForm() {
                   type="radio"
                   name="bloodType"
                   value="4"
-                  checked={selectedOption === '4'}
-                  onChange={e => setSelectedOption(e.target.value)}
+                  checked={formData.bloodType === '4'}
+                  onChange={e =>
+                    setFormData({ ...formData, bloodType: e.target.value })
+                  }
                 />
                 <span className={css.inputRadioStyled}></span>
               </label>
